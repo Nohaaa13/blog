@@ -38,7 +38,7 @@ class InfoController extends Controller
 
         return response()->json(
             $Ids
-        );
+        )->header('Access-Control-Allow-Origin', '*')->header('Accept', 'application/json')->header('Content-Type', 'application/json');
 
 
     }
