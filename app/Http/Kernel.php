@@ -13,6 +13,7 @@ class Kernel extends HttpKernel
      *
      * @var array
      */
+
     protected $middleware = [
         \App\Http\Middleware\TrustProxies::class,
         \App\Http\Middleware\CheckForMaintenanceMode::class,
@@ -60,7 +61,9 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'cors' => \App\Http\Middleware\Cors::class, // <-- add this line
     ];
+
 
     /**
      * The priority-sorted list of middleware.
