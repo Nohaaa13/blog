@@ -40,7 +40,8 @@ class InfoController extends Controller
             $Ids
         )->header('Access-Control-Allow-Origin', '*')->header('Accept', 'application/json')->header('Content-Type', 'application/json')
             ->header('Access-Control-Allow-Methods', 'GET, POST')->header('Access-Control-Allow-Headers', '*')
-            ->header('Access-Control-Allow-Credentials', 'true') ->header('Access-Control-Max-Age', '86400');
+            ->header('Access-Control-Allow-Credentials', 'true') ->header('Access-Control-Max-Age', '86400')
+            ->header('Access-Control-Request-Headers', '*');
 
     }
 
